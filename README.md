@@ -28,5 +28,5 @@ fig.suptitle("Likelyhood of Job Skills in Postings", fontsize=15)
 fig.tight_layout()
 ```
 ### Results
-![Required skills for top 3 most popular job](images\top_skills_of_most_popular_jobs.png)
+![Required skills for top 3 most popular job](Python_for_Data_Analytics_Course\images\top_skills_of_most_popular_jobs.png)
 
