@@ -6,7 +6,7 @@ View my notebook with detailed steps:
 [Skill_Demand.ipynb](Python_for_Data_Analytics_Course\03_Project_Section\Skill_Demand.ipynb)
 
 ### Visualize Data
-```
+```python
 fig, ax = plt.subplots(len(job_titles), 1)
 
 for i, job_title in enumerate(job_titles):
@@ -28,5 +28,90 @@ fig.suptitle("Likelyhood of Job Skills in Postings", fontsize=15)
 fig.tight_layout()
 ```
 ### Results
-![Required skills for top 3 most popular job](Python_for_Data_Analytics_Course\images\top_skills_of_most_popular_jobs.png)
+![img](images/top_skills_of_most_popular_jobs.png)
 
+### Insights
+
+- Python is a versatile skill, highly demanded across all three roles, but most promeinently for Data Scientists (72%) and Data Engineers (65%)
+- SQL is the most requested skill for Data Analysts and also the second most requested for Data Engineers and Data Scientists
+
+## 2. How are in-demand skills trending for Data Engineers?
+
+### Visualize Data
+```python
+from matplotlib.ticker import PercentFormatter
+
+df_plot = df_DE_Ger_percentage.iloc[:,:5]
+sns.lineplot(df_plot, dashes=False, palette='Set2')
+plt.title('Trending Top Skills for Data Engineers in Germany')
+plt.ylabel('Likelyhood in Job Posting')
+plt.xlabel('2023')
+plt.legend().remove()
+sns.despine()
+
+ax=plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+for i in range(5):
+    col = df_plot.columns[i]
+    y = df_plot.iloc[-1, i]
+
+    if col.lower() == "python":
+        y = y + 2
+    elif col.lower() == "sql":
+        y = y - 2
+
+    plt.text(11.2, y, col)
+```
+
+### Results
+![img2](images\data_engineer_trending_top_skills.png)
+
+
+### Insights 
+
+- SQL and python remain the most consistently demanded skills throughout the year, although python shows a gradual decrease in demand
+- azure shows a relatively stable demand throughout the year and is after python and sql the third most demanded skill over almost the whole year
+- aws and spark also count towards the most demanded job skills for Data Engineers, eventhough they both show a gradal decrease over the year
+
+## 3. How well do jobs and skills pay for Data Analysts?
+
+### Salary Analysis
+
+#### Visualize Data 
+
+````python
+sns.boxplot(data=job_ger_top5, x='salary_year_avg', y='job_title_short', order=job_order, palette='crest')
+plt.title('Yearly Salary Comparison for Data Roles in India')
+plt.xlabel('Yearly Salary (USD)')
+plt.ylabel('')
+plt.xlim(0, 300000)
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)}k'))
+plt.show()
+````
+
+#### Results
+
+![img3](images\boxplots_most_popular_jobs.png) 
+
+### Highest Paid and Most Popular Skills for Data Analysts
+#### Visualize Data
+
+````python
+# Top 10 Highest Paid Skills for Data Analysts (Germany)
+sns.barplot(data=df_DA_top_pay, x='median', y=df_DA_top_pay.index, hue='median', ax=ax[0], palette='crest')
+ax[0].legend().remove()
+ax[0].set_title('Top 10 Highest Paid Skills for Data Analysts')
+ax[0].set_ylabel('')
+ax[0].set_xlabel('Median Salary (USD)')
+ax[0].set_xlim(ax[0].get_xlim())
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K'))
+````
+
+![img4](images\top10_most_pop_and_best_paid_skills.png)
+
+#### Insights
+
+- Senior and engineering roles pay more: Senior Data Scientists and (Senior) Data Engineers earn significantly more than Data Analysts; ML Engineers also show the widest salary range.
+- Infrastructure and cloud skills command a premium: Terraform, BigQuery, Redshift, Kafka, and GCP are among the highest-paid skills, outperforming traditional analytics tools.
+- Popularity does not equal pay: Python, Pandas, Excel, and SQL are the most common skills, but their median salaries are lower than those of specialized big-data and cloud skills.
