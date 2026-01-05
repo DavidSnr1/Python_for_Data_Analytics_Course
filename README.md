@@ -58,9 +58,6 @@ df_Ger = df[df['job_country'] == 'Germany']
 ## 1. What are the most demanded skills for the top 3 most popular data roles?
 To find the most demanded skills for the 3 most popular data roles, I first filtered out the 3 data roles with the most job postings. Then I plotted them with their required skills. Each value shows the likelyhood of a skill being required for the respective job.
 
-View my notebook with detailed steps:
-[Skill_Demand.ipynb](Python_for_Data_Analytics_Course\03_Project_Section\Skill_Demand.ipynb)
-
 ### Visualize Data
 ```python
 fig, ax = plt.subplots(len(job_titles), 1)
