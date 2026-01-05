@@ -81,7 +81,7 @@ fig.suptitle("Likelyhood of Job Skills in Postings", fontsize=15)
 fig.tight_layout()
 ```
 ### Results
-![img](Python_for_Data_Analytics_Course\03_Project_Section\images\top_skills_of_most_popular_jobs.png)
+![img](03_Project_Section\images\top_skills_of_most_popular_jobs.png)
 
 ### Insights
 
@@ -118,7 +118,7 @@ for i in range(5):
 ```
 
 ### Results
-![img2](Python_for_Data_Analytics_Course\03_Project_Section\images\data_engineer_trending_top_skills.png)
+![img2](03_Project_Section\images\data_engineer_trending_top_skills.png)
 
 
 ### Insights 
@@ -145,7 +145,7 @@ plt.show()
 
 #### Results
 
-![img3](Python_for_Data_Analytics_Course\03_Project_Section\images\boxplots_most_popular_jobs.png) 
+![img3](03_Project_Section\images\boxplots_most_popular_jobs.png) 
 
 ### Highest Paid and Most Popular Skills for Data Analysts
 #### Visualize Data
@@ -161,7 +161,7 @@ ax[0].set_xlim(ax[0].get_xlim())
 ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K'))
 ````
 
-![img4](Python_for_Data_Analytics_Course\03_Project_Section\images\top10_most_pop_and_best_paid_skills.png)
+![img4](03_Project_Section\images\top10_most_pop_and_best_paid_skills.png)
 
 #### Insights
 
@@ -184,7 +184,7 @@ sns.scatterplot(
 )
 ````
 
-![img5](Python_for_Data_Analytics_Course\03_Project_Section\images\most_optimal_skill_to_learn.png)
+![img5](03_Project_Section\images\most_optimal_skill_to_learn.png)
 
 #### Insights
 - High Demand vs. High Pay: SQL and Python are the most frequently required skills, appearing in approximately 38% to 50% of job postings, though they offer mid-range median salaries compared to niche technologies.
