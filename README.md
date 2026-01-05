@@ -81,7 +81,7 @@ fig.suptitle("Likelyhood of Job Skills in Postings", fontsize=15)
 fig.tight_layout()
 ```
 ### Results
-![img](03_Project_Section\images\top_skills_of_most_popular_jobs.png)
+![img](images\top_skills_of_most_popular_jobs.png)
 
 ### Insights
 
