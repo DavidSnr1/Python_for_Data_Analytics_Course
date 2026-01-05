@@ -1,5 +1,5 @@
 # Overview
-Welcome to my analysis of the data job market, focussing on data analyst roles. This project was created out of desire to navigate and understand the job market more effectively. It delves into the top-paying and in-demand skills to help find optimal opportunities for Data Analysts.
+Welcome to my analysis of the data job market, focusing on data analyst roles. This project was created out of a desire to navigate and understand the job market more effectively. It delves into the top-paying and in-demand skills to help find optimal opportunities for Data Analysts.
 
 The data is sourced from [Luke Barousse's Python Course](https://www.lukebarousse.com/products/python-for-data-analytics) which provides a foundation for my analysis, containing detailed information on job titles, salary trends and the intersection of demand and salary in data analytics.
 
@@ -18,7 +18,7 @@ For my deep dive into the data analyst job market, I harnessed the power of seve
     - **Matplotlib Library**: I visualized the data.
     - **Seaborn Library**: Helped me create more advanced visuals.
 - **Jupyter Notebooks**: The tool I used to run my python scripts which let me easily include my notes and analysis.
-- **Visual Studio Code**: My go-to for excecuting Python scripts.
+- **Visual Studio Code**: My go-to for executing Python scripts.
 - **Git & Github**: Essential for version control and sharing my Python code and analysis.
 
 # Data Preparation and Cleanup
@@ -47,7 +47,7 @@ df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.no
 
 ## Filter German Jobs
 
-To focus my analysis on Germany. job market, I apply filters to the dataset, narrowing down to roles based in the Germany.
+To focus my analysis on German job market, I apply filters to the dataset, narrowing down to roles based in Germany.
 
 ```python
 df_Ger = df[df['job_country'] == 'Germany']
@@ -85,7 +85,7 @@ fig.tight_layout()
 
 ### Insights
 
-- Python is a versatile skill, highly demanded across all three roles, but most promeinently for Data Scientists (72%) and Data Engineers (65%)
+- Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (72%) and Data Engineers (65%)
 - SQL is the most requested skill for Data Analysts and also the second most requested for Data Engineers and Data Scientists
 
 ## 2. How are in-demand skills trending for Data Engineers?
@@ -125,7 +125,7 @@ for i in range(5):
 
 - SQL and python remain the most consistently demanded skills throughout the year, although python shows a gradual decrease in demand
 - azure shows a relatively stable demand throughout the year and is after python and sql the third most demanded skill over almost the whole year
-- aws and spark also count towards the most demanded job skills for Data Engineers, eventhough they both show a gradal decrease over the year
+- aws and spark also count towards the most demanded job skills for Data Engineers, even though they both show a gradual decrease over the year
 
 ## 3. How well do jobs and skills pay for Data Analysts?
 
