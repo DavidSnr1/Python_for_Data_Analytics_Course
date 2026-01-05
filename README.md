@@ -115,3 +115,27 @@ ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K
 - Senior and engineering roles pay more: Senior Data Scientists and (Senior) Data Engineers earn significantly more than Data Analysts; ML Engineers also show the widest salary range.
 - Infrastructure and cloud skills command a premium: Terraform, BigQuery, Redshift, Kafka, and GCP are among the highest-paid skills, outperforming traditional analytics tools.
 - Popularity does not equal pay: Python, Pandas, Excel, and SQL are the most common skills, but their median salaries are lower than those of specialized big-data and cloud skills.
+
+## What is the most optimal skill to learn for Data Analyst?
+
+#### Visualize Data
+
+````python
+from adjustText import adjust_text
+
+sns.scatterplot(
+    data=df_plot,
+    x='skill_percent',
+    y='median_salary',
+    hue='technology'
+)
+````
+
+![img5](images\most_optimal_skill_to_learn.png)
+
+#### Insights
+- High Demand vs. High Pay: SQL and Python are the most frequently required skills, appearing in approximately 38% to 50% of job postings, though they offer mid-range median salaries compared to niche technologies.
+
+- Lucrative Niche Skills: Tools like GitHub and GCP (Google Cloud Platform) represent "high-value" niches; they appear in a smaller percentage of jobs (under 10%) but are associated with the highest median salaries, reaching up to $200k.
+
+- Dominant Toolsets: Analyst tools like Tableau and Excel maintain a strong presence in the market (between 15% and 30%), serving as a middle ground with stable demand and salaries around the $100k mark.
