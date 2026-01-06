@@ -85,10 +85,15 @@ fig.tight_layout()
 
 ### Insights
 
-- Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (72%) and Data Engineers (65%)
-- SQL is the most requested skill for Data Analysts and also the second most requested for Data Engineers and Data Scientists
+- SQL is the foundation: It is the most requested skill for Data Analysts (41%) and the second most for Data Engineers (48%), making it essential for entry into the field.
+- Python dominance in Data Science: 61% of Data Scientist job postings require Python, significantly higher than the 32% for SQL and 26% for R.
+- Cloud for Engineers: Data Engineering roles prioritize Azure (31%) and AWS (24%) much more than Analyst or Scientist roles, reflecting the focus on infrastructure.
+
 
 ## 2. How are in-demand skills trending for Data Engineers?
+
+To find how skills are trending in 2023 for Data Analysts, I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
+
 
 ### Visualize Data
 ```python
@@ -123,15 +128,16 @@ for i in range(5):
 
 ### Insights 
 
-- SQL and python remain the most consistently demanded skills throughout the year, although python shows a gradual decrease in demand
-- azure shows a relatively stable demand throughout the year and is after python and sql the third most demanded skill over almost the whole year
-- aws and spark also count towards the most demanded job skills for Data Engineers, even though they both show a gradual decrease over the year
+- Core stability: Python and SQL consistently remain the most sought-after skills throughout 2024, both ending the year near the 60% mark.
+- Azure on the rise: The demand for Azure saw a significant upward trend from April to September, peaking above 40% before a slight year-end dip.
+- AWS decline: In contrast to Azure's growth, AWS saw a sharp decline in popularity after July, dropping from roughly 23% to around 15% by December.
 
 ## 3. How well do jobs and skills pay for Data Analysts?
 
-### Salary Analysis
+To identify the highest-paying roles and skills, I only got jobs in the United States and looked at their median salary. But first I looked at the salary distributions of common data jobs like Data Scientist, Data Engineer, and Data Analyst, to get an idea of which jobs are paid the most. 
 
-#### Visualize Data 
+
+### Visualize Data 
 
 ````python
 sns.boxplot(data=job_ger_top5, x='salary_year_avg', y='job_title_short', order=job_order, palette='crest')
@@ -143,12 +149,22 @@ plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1
 plt.show()
 ````
 
-#### Results
+### Results
 
 ![img3](images/boxplots_most_popular_jobs.png) 
 
-### Highest Paid and Most Popular Skills for Data Analysts
-#### Visualize Data
+
+### Insights
+
+- ML Engineers lead the pack: Machine Learning Engineers have the highest upper-quartile potential, with salaries stretching toward $225k.
+- Seniority doesn't guarantee the highest peak: While Senior Data Scientists have a high median (around $150k), the spread of Data Scientist roles shows more extreme high-end outliers.
+- Analyst Floor: Data Analysts have the lowest median salary (approx. $100k) and the tightest distribution, indicating a more standardized and lower-ceiling pay scale compared to Engineering roles.
+
+## 4. Highest Paid and Most Popular Skills for Data Analysts
+
+Next, I narrowed my analysis and focused only on data analyst roles. I looked at the highest-paid skills and the most in-demand skills. I used two bar charts to showcase these.
+
+### Visualize Data
 
 ````python
 # Top 10 Highest Paid Skills for Data Analysts (Germany)
@@ -160,18 +176,21 @@ ax[0].set_xlabel('Median Salary (USD)')
 ax[0].set_xlim(ax[0].get_xlim())
 ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K'))
 ````
+### Results
 
 ![img4](images/top10_most_pop_and_best_paid_skills.png)
 
-#### Insights
+### Insights
 
-- Senior and engineering roles pay more: Senior Data Scientists and (Senior) Data Engineers earn significantly more than Data Analysts; ML Engineers also show the widest salary range.
-- Infrastructure and cloud skills command a premium: Terraform, BigQuery, Redshift, Kafka, and GCP are among the highest-paid skills, outperforming traditional analytics tools.
-- Popularity does not equal pay: Python, Pandas, Excel, and SQL are the most common skills, but their median salaries are lower than those of specialized big-data and cloud skills.
+- Niche pays better: The highest-paid skills (MySQL at $200k+, GitHub, NoSQL) are not the same as the most popular skills, indicating that specialized technical knowledge commands a premium.
+- The "Popularity Gap": The most popular skills like Spark and Python have median salaries around $100k, which is nearly 50% lower than the top-tier technical niches.
+- Legacy tools pay less: General-purpose tools like "Go" and "Looker" sit at the bottom of the popular salary list, falling significantly below the $75k mark.
 
 ## What is the most optimal skill to learn for Data Analyst?
 
-#### Visualize Data
+To identify the most optimal skills to learn ( the ones that are the highest paid and highest in demand) I calculated the percent of skill demand and the median salary of these skills. To easily identify which are the most optimal skills to learn. 
+
+### Visualize Data
 
 ````python
 from adjustText import adjust_text
@@ -184,14 +203,15 @@ sns.scatterplot(
 )
 ````
 
+### Result
+
 ![img5](images/most_optimal_skill_to_learn.png)
 
-#### Insights
-- High Demand vs. High Pay: SQL and Python are the most frequently required skills, appearing in approximately 38% to 50% of job postings, though they offer mid-range median salaries compared to niche technologies.
+### Insights
 
-- Lucrative Niche Skills: Tools like GitHub and GCP (Google Cloud Platform) represent "high-value" niches; they appear in a smaller percentage of jobs (under 10%) but are associated with the highest median salaries, reaching up to $200k.
-
-- Dominant Toolsets: Analyst tools like Tableau and Excel maintain a strong presence in the market (between 15% and 30%), serving as a middle ground with stable demand and salaries around the $100k mark.
+- High demand & High pay: Python and SQL are the most "optimal" because they sit in the top right quadrant—high market demand (40%+) and high median salaries ($100k+).
+- The Library Advantage: "Pandas" and "Spark" offer the highest median yearly salaries (exceeding $105k) despite appearing in fewer than 15% of job postings.
+- Tool Oversaturation: Analyst tools like Excel and Power BI are common in jobs but generally result in lower median salaries compared to programming-heavy skills.
 
 # What I Learned
 
