@@ -123,7 +123,7 @@ for i in range(5):
 ```
 
 ### Results
-![img2](images/data_engineer_trending_top_skills.png)
+![img2](images/data_analyst_trending_top_skills.png)
 
 
 ### Insights 
