@@ -47,7 +47,7 @@ df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.no
 
 ## Filter German Jobs
 
-To focus my analysis on German job market, I apply filters to the dataset, narrowing down to roles based in Germany.
+To focus my analysis on the German job market, I applied filters to the dataset, narrowing down to roles based in Germany.
 
 ```python
 df_Ger = df[df['job_country'] == 'Germany']
@@ -90,7 +90,7 @@ fig.tight_layout()
 - Cloud for Engineers: Data Engineering roles prioritize Azure (31%) and AWS (24%) much more than Analyst or Scientist roles, reflecting the focus on infrastructure.
 
 
-## 2. How are in-demand skills trending for Data Engineers?
+## 2. How are in-demand skills trending for Data Analysts?
 
 To find how skills are trending in 2023 for Data Analysts, I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
 
