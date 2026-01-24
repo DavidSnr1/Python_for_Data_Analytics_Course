@@ -90,7 +90,7 @@ fig.tight_layout()
 - Cloud for Engineers: Data Engineering roles prioritize Azure (31%) and AWS (24%) much more than Analyst or Scientist roles, reflecting the focus on infrastructure.
 
 
-## 2. How are in-demand skills trending for Data Engineers?
+## 2. How are in-demand skills trending for Data Analysts?
 
 To find how skills are trending in 2023 for Data Analysts, I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
 
