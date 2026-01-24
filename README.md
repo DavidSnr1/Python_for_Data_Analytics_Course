@@ -128,9 +128,9 @@ for i in range(5):
 
 ### Insights 
 
-- Core stability: Python and SQL consistently remain the most sought-after skills throughout 2024, both ending the year near the 60% mark.
-- Azure on the rise: The demand for Azure saw a significant upward trend from April to September, peaking above 40% before a slight year-end dip.
-- AWS decline: In contrast to Azure's growth, AWS saw a sharp decline in popularity after July, dropping from roughly 23% to around 15% by December.
+- Dominance of SQL and Python: SQL and Python consistently remain the top two skills throughout 2024, with SQL ending the year as the most sought-after skill at over 50% likelihood.
+- Excel's Volatility: Demand for Excel shows significant fluctuations, peaking in September before experiencing a sharp decline to under 20% by December.
+- Power BI Recovery: Despite a major dip in August, Power BI shows signs of stabilization toward the end of the year, finishing December nearly neck-and-neck with Excel.
 
 ## 3. How well do jobs and skills pay for Data Analysts?
 
