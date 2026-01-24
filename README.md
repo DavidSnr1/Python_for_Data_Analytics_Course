@@ -47,7 +47,7 @@ df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.no
 
 ## Filter German Jobs
 
-To focus my analysis on the German job market, I apply filters to the dataset, narrowing down to roles based in Germany.
+To focus my analysis on the German job market, I applied filters to the dataset, narrowing down to roles based in Germany.
 
 ```python
 df_Ger = df[df['job_country'] == 'Germany']
